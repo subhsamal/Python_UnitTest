@@ -3,8 +3,11 @@
 import unittest
 from phonebook import Phonebook
 
+# A testcase is created by subclassing unittest.TestCase
 class PhonebookTest(unittest.TestCase):
 
+# The setUp() and tearDown() methods allow you to define instructions that will
+# be executed before and after each test method.
     def setUp(self):
         self.phonebook = Phonebook()
 
@@ -60,3 +63,10 @@ class PhonebookTest(unittest.TestCase):
         self.phonebook.add("sue", "12345")
         self.assertIn("sue", self.phonebook.get_names())
         self.assertIn("12345", self.phonebook.get_numbers())
+
+# This block shows a simple way to run the tests. unittest.main() provides
+# a command-line interface to the test script. Without this blcok, the test can
+# be executed by the command -  "python3 -m unittest" and with this -
+# python3 test_phonebook.py
+if __name__ == "__main__":
+    unittest.main()
