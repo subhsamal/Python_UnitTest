@@ -1,6 +1,7 @@
 # This is test_adder.py file
 from proj.adder import adder
 import unittest
+import pytest
 
 
 # class TestAdder(unittest.TestCase):
@@ -11,3 +12,6 @@ import unittest
 def test_add():
     res = adder(2, 3)
     assert res == 5, "Value should be 5"
+
+if __name__ == '__main__':
+    unittest.main()
